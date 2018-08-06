@@ -1,13 +1,12 @@
 import { store } from '../store'
 import { getMoviesFromApiAsync } from '../api'
-import { FETCH_MOVIES, MOVIES_FETCHED, moviesFetched, FAILED_TO_FETCH_MOVIES, failedToFetchMovies } from '../actions/movies'
-
-console.log('here', FETCH_MOVIES)
+import { moviesFetched, failedToFetchMovies } from '../actions/movies'
 
 export function moviesReducer(state = { fetching: false, movies: [], errorMessage: '' }, action = { type: '' }) {
   switch (action.type) {
 
-    case FETCH_MOVIES:
+    // Tried using constants for each one but Jest doesn't like that :(
+    case 'FETCH_MOVIES':
       if (state.fetching) {
         return state
       }
@@ -21,14 +20,14 @@ export function moviesReducer(state = { fetching: false, movies: [], errorMessag
         fetching: true
       }
 
-    case MOVIES_FETCHED:
+    case 'MOVIES_FETCHED':
       return {
         ...state,
         fetching: false,
         movies: action.movies
       }
 
-    case FAILED_TO_FETCH_MOVIES:
+    case 'FAILED_TO_FETCH_MOVIES':
       return {
         ...state,
         fetching: false,

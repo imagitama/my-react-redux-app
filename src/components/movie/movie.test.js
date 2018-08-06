@@ -3,5 +3,5 @@ import { mount } from 'enzyme'
 import { Movie } from './movie'
 
 it('Matches the snapshot', () => {
-  expect(mount(<Movie />)).toMatchSnapshot()
+  expect(mount(<Movie title='My movie' releaseYear='2000' />)).toMatchSnapshot()
 })

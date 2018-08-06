@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Matches the snapshot 1`] = `
+<Component>
+  <Styled(div)>
+    <div
+      className="css-os96a3"
+    >
+      Loading...
+    </div>
+  </Styled(div)>
+</Component>
+`;

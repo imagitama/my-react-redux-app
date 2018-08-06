@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Matches the snapshot 1`] = `
+<Component
+  releaseYear="2000"
+  title="My movie"
+>
+  <Styled(li)>
+    <li
+      className="css-1eg3kgk"
+    >
+      My movie
+       (
+      2000
+      )
+    </li>
+  </Styled(li)>
+</Component>
+`;
