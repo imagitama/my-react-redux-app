@@ -2,7 +2,9 @@ import { store } from '../store'
 import { getMoviesFromApiAsync } from '../api'
 import { FETCH_MOVIES, MOVIES_FETCHED, moviesFetched, FAILED_TO_FETCH_MOVIES, failedToFetchMovies } from '../actions/movies'
 
-export function moviesReducer(state = { fetching: false, movies: [] }, action) {
+console.log('here', FETCH_MOVIES)
+
+export function moviesReducer(state = { fetching: false, movies: [], errorMessage: '' }, action = { type: '' }) {
   switch (action.type) {
 
     case FETCH_MOVIES:

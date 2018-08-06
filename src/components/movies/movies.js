@@ -9,10 +9,11 @@ const StyledMovies = styled('ul')({
   padding: 0
 })
 
-export const Movies = connect(state => state.movies)(({ fetching, movies }) => 
-  fetching ? 
-    <LoadingIndicator /> :
-    <StyledMovies>
-      {movies.map(movie => <Movie key={movie.id} {...movie} />)}
-    </StyledMovies>
-)
+export const Movies = ({ fetching, movies }) => 
+fetching ? 
+  <LoadingIndicator /> :
+  <StyledMovies>
+    {movies.map(movie => <Movie key={movie.id} {...movie} />)}
+  </StyledMovies>
+
+export default connect(state => state.movies)(Movies)

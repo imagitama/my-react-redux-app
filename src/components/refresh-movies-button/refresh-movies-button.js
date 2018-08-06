@@ -9,6 +9,7 @@ const StyledRefreshMoviesButton = styled('button')({
   display: 'block'
 })
 
-export const RefreshMoviesButton = connect(null, { fetchMovies })(({ fetchMovies }) => 
-  <StyledRefreshMoviesButton onClick={fetchMovies}>Refresh!</StyledRefreshMoviesButton>
-)
+export const RefreshMoviesButton = ({ fetchMovies }) => 
+<StyledRefreshMoviesButton onClick={fetchMovies}>Refresh!</StyledRefreshMoviesButton>
+
+export default connect(null, { fetchMovies })(RefreshMoviesButton)
