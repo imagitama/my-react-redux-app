@@ -5,3 +5,5 @@ import { RefreshMoviesButton } from './refresh-movies-button'
 it('Matches the snapshot', () => {
   expect(mount(<RefreshMoviesButton fetchMovies={() => null} />)).toMatchSnapshot()
 })
+
+// TODO: Test the onClick

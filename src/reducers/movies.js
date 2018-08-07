@@ -24,6 +24,7 @@ export function moviesReducer(state = { fetching: false, movies: [], errorMessag
       return {
         ...state,
         fetching: false,
+        errorMessage: '',
         movies: action.movies
       }
 

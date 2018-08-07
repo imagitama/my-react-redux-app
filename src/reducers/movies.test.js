@@ -7,3 +7,5 @@ it('Returns the correct default state', () => {
     errorMessage: ''
   })
 })
+
+// TODO: Test each action

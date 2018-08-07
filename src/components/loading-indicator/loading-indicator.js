@@ -6,6 +6,7 @@ const StyledLoadingIndicator = styled('div')({
   textAlign: 'center'
 })
 
+// TODO: Connect itself to state?
 export const LoadingIndicator = () =>
   <StyledLoadingIndicator>
     Loading...

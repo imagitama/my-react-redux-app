@@ -10,6 +10,7 @@ const StyledMovie = styled('li')({
   }
 })
 
+// TODO: Connect directly to state using movie ID?
 export const Movie = ({ title, releaseYear }) => 
   <StyledMovie>
     {title} ({releaseYear})
