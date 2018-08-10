@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import styled from 'react-emotion'
-import { fetchMovies } from '../../actions/movies'
+import { moviesFetchAsync } from '../../actions/movies'
 
 const StyledRefreshMoviesButton = styled('button')({
   padding: '0.5rem',
@@ -9,7 +9,7 @@ const StyledRefreshMoviesButton = styled('button')({
   display: 'block'
 })
 
-export const RefreshMoviesButton = ({ fetchMovies }) => 
-<StyledRefreshMoviesButton onClick={fetchMovies}>Refresh!</StyledRefreshMoviesButton>
+export const RefreshMoviesButton = ({ moviesFetchAsync }) => 
+<StyledRefreshMoviesButton onClick={moviesFetchAsync}>Refresh!</StyledRefreshMoviesButton>
 
-export default connect(null, { fetchMovies })(RefreshMoviesButton)
+export default connect(null, { moviesFetchAsync })(RefreshMoviesButton)

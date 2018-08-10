@@ -4,12 +4,9 @@ exports[`Matches the snapshot 1`] = `
 <Component
   fetchMovies={[Function]}
 >
-  <Styled(button)
-    onClick={[Function]}
-  >
+  <Styled(button)>
     <button
       className="css-12fl8ck"
-      onClick={[Function]}
     >
       Refresh!
     </button>
