@@ -10,7 +10,11 @@ export function moviesFetch() {
 
 export const MOVIES_FETCH_ASYNC = 'MOVIES_FETCH_ASYNC'
 export function moviesFetchAsync() {
-  return dispatch => {
+  return (dispatch, getStore) => {
+    if (getStore().fetching) {
+      return
+    }
+
     dispatch(moviesFetch())
 
     getMoviesFromApiAsync()
